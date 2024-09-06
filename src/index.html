@@ -1,0 +1,434 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tailwind CSS Activity</title>
+        <link href="./output.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="bg-black fixed top-0 inset-x-0 z-50">
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                <div class="relative flex h-16 items-center justify-between">
+                    <!-- Mobile menu button -->
+                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                        <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <!-- Logo -->
+                    <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                        <a href="#hero" class="flex flex-shrink-0 items-center text-white text-3xl font-comic">
+                            RENZ
+                        </a>
+                    </div>
+                    <!-- Desktop menu -->
+                    <div class="hidden sm:ml-6 sm:block py-8">
+                        <div class="flex space-x-4">
+                            <a href="#hero" class="text-white hover:border-b-2 hover:border-color-3 hover:text-color-3 rounded-none px-3 py-2 text-xl font-comic" aria-current="page">Home</a>
+                            <a href="#about" class="text-white hover:border-b-2 hover:border-color-3 hover:text-color-3 rounded-none px-3 py-2 text-xl font-comic" aria-current="page">About</a>
+                            <a href="#services-section" class="text-white hover:border-b-2 hover:border-color-3 hover:text-color-3 rounded-none px-3 py-2 text-xl font-comic" aria-current="page">Services</a>
+                            <a href="#skills-section" class="text-white hover:border-b-2 hover:border-color-3 hover:text-color-3 rounded-none px-3 py-2 text-xl font-comic" aria-current="page">Skills</a>
+                            <a href="#projects-section" class="text-white hover:border-b-2 hover:border-color-3 hover:text-color-3 rounded-none px-3 py-2 text-xl font-comic" aria-current="page">Projects</a>
+                            <a href="#hire-section" class="text-white hover:border-b-2 hover:border-color-3 hover:text-color-3 rounded-none px-3 py-2 text-xl font-comic" aria-current="page">Hire?</a>
+                        </div>
+                    </div>
+                    <!-- Notification and profile -->
+                    <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                        <!-- Notifications and profile -->
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Mobile menu dropdown -->
+            <div id="mobile-menu" class="fixed inset-0 z-40 bg-black bg-opacity-75 hidden">
+                <div class="relative flex flex-col items-center justify-center h-full space-y-6">
+                    <button id="close-menu" type="button" class="absolute top-4 right-4 inline-flex items-center justify-center p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                        <span class="sr-only">Close menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                    <div class="space-y-4 px-2">
+                        <a href="#hero" class="block rounded-md px-3 py-2 text-base font-medium text-white" aria-current="page">Home</a>
+                        <a href="#about" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
+                        <a href="#services-section" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Services</a>
+                        <a href="#skills-section" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Skills</a>
+                        <a href="#projects-section" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
+                        <a href="#hire-section" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Hire?</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        
+        
+        
+        <!-- JavaScript for mobile menu toggle -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const mobileMenuButton = document.getElementById('mobile-menu-button');
+                const mobileMenu = document.getElementById('mobile-menu');
+                const closeMenuButton = document.getElementById('close-menu');
+                
+                mobileMenuButton.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('hidden');
+                });
+        
+                closeMenuButton.addEventListener('click', function () {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        </script>
+        
+
+        <section id="hero" class="relative w-full h-screen bg-black text-white flex items-center overflow-hidden">
+            <!-- Background Image for Small Screens -->
+            <div class="absolute inset-0 bg-cover bg-center md:hidden" style="background-image: url('../images/me.png');"></div>
+            <!-- Main Content -->
+            <div class="relative z-10 container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+                <div class="w-full md:w-1/2 p-4 text-center md:text-left">
+                  <a class="text-xl md:text-2xl">Hello!</a>
+                  <h1 class="text-4xl md:text-7xl font-bold mb-4 font-monaco">
+                    I'm <span class="text-color-3">LAWRENCE AVES SABRIDO</span>
+                  </h1>
+                  <p class="text-xl md:text-4xl mb-8">A BSIT III Student.</p>
+                  <a href="#hire-section" class="bg-color-3 text-black px-6 md:px-8 py-3 md:py-5 rounded-full font-medium text-sm md:text-base">Hire Me</a>
+                  <a href="#my-works-section" class="bg-black border-2 text-white mx-4 md:mx-5 px-6 md:px-8 py-3 md:py-5 rounded-full font-bold text-sm md:text-base">My Works</a>
+                </div>
+                <div class="hidden md:block w-full md:w-1/2 p-4">
+                  <img src="../images/me.png" alt="Hero Image" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+              </div>              
+        </section>
+        
+
+        <section id="about" class="relative py-16 bg-black text-white">
+            <div class="container mx-auto px-6 relative">
+                <div class="flex flex-col md:flex-row items-center">
+                    <!-- Image Section -->
+                    <div class="w-full md:w-1/2 p-4">
+                        <img src="../images/me.png" alt="About Photo" class="w-full h-auto rounded-lg shadow-lg">
+                    </div>
+                    <!-- Personal Information Section -->
+                    <div class="w-full md:w-1/2 p-4 text-center md:text-left">
+                        <h2 class="relative text-5xl font-bold mb-8 z-10">About Me</h2>
+                        <a class="absolute text-6xl md:text-9xl text-center font-bold text-gray-300 -z-10">
+                            About
+                        </a>
+                        <p class="text-gray-400 text-lg mb-8 font-verdana">
+                            I am a passionate web developer with a focus on creating sleek, responsive websites that provide seamless user experiences. With a background in front-end development, I specialize in HTML, CSS, JavaScript, and React, constantly seeking to enhance my skills and stay updated with the latest technologies.
+                        </p>
+                        <ul class="list-none">
+                            <li class="flex mb-4">
+                                <span class="w-1/3 font-bold mb-4 text-xl">Name:</span>
+                                <span class="w-2/3 text-gray-300 text-lg">Lawrence Sabrido</span>
+                            </li>
+                            <li class="flex mb-4">
+                                <span class="w-1/3 font-bold mb-4 text-xl">Date of Birth:</span>
+                                <span class="w-2/3 text-gray-300 text-lg">October 15, 2003</span>
+                            </li>
+                            <li class="flex mb-4">
+                                <span class="w-1/3 font-bold mb-4 text-xl">Address:</span>
+                                <span class="w-2/3 text-gray-300 text-lg">123 St. Taglatawan, Bayugan City, PH</span>
+                            </li>
+                            <li class="flex mb-4">
+                                <span class="w-1/3 font-bold mb-4 text-xl">Zip Code:</span>
+                                <span class="w-2/3 text-gray-300 text-lg">8502</span>
+                            </li>
+                            <li class="flex mb-4">
+                                <span class="w-1/3 font-bold mb-4 text-xl">Email:</span>
+                                <span class="w-2/3 text-gray-300 text-lg">renzsabrido1@gmail.com</span>
+                            </li>
+                            <li class="flex mb-4">
+                                <span class="w-1/3 font-bold mb-4 text-xl">Phone:</span>
+                                <span class="w-2/3 text-gray-300 text-lg">+63975 893 9159</span>
+                            </li>
+                        </ul>
+                        
+                        <!-- Counter and CV Download Section -->
+                        <div class="mt-8">
+                            <div class="counter-wrap flex flex-col items-center md:items-start">
+                                <div class="text mb-4 mb-4">
+                                    <p class="text-3xl font-bold">
+                                        <span class="number text-color-3" data-number="3">3 <span class="text-white">Project complete</span></span>
+                                    </p>
+                                </div>
+                                <p class="mt-5">
+                                    <a href="#" class="btn bg-color-3 text-black py-5 px-9 rounded-full font-medium">DOWNLOAD CV</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section class="bg-black py-12" id="services-section">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="text-center mb-10">
+                    <h1 class="text-5xl font-bold text-white mb-10">Services</h1>
+                    <p class="text-gray-300 text-xl">My services are centered on creating engaging, functional, and user-friendly websites that cater to modern standards and expectations.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Service Box 1 -->
+                    <div class="group bg-color-2 hover:bg-color-3 p-6 min-h-56 transition-colors duration-300 text-center flex flex-col items-center">
+                        <img src="../images/analysis.png" alt="Web Design" class="mb-4 w-24 h-24 object-cover">
+                        <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-black">Web Design</h3>
+                    </div>
+                    <!-- Service Box 2 -->
+                    <div class="group bg-color-2 hover:bg-color-3 p-6 min-h-56 transition-colors duration-300 text-center flex flex-col items-center">
+                        <img src="../images/flask.png" alt="UI/UX Design" class="mb-4 w-24 h-24 object-cover">
+                        <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-black">UI/UX Design</h3>
+                    </div>
+                    <!-- Service Box 3 -->
+                    <div class="group bg-color-2 hover:bg-color-3 p-6 min-h-56 transition-colors duration-300 text-center flex flex-col items-center">
+                        <img src="../images/ideas.png" alt="Web Development" class="mb-4 w-24 h-24 object-cover">
+                        <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-black">Web Development</h3>
+                    </div>
+                    <!-- Service Box 4 -->
+                    <div class="group bg-color-2 hover:bg-color-3 p-6 min-h-56 transition-colors duration-300 text-center flex flex-col items-center">
+                        <img src="../images/analysis.png" alt="App Development" class="mb-4 w-24 h-24 object-cover">
+                        <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-black">App Development</h3>
+                    </div>
+                    <!-- Service Box 5 -->
+                    <div class="group bg-color-2 hover:bg-color-3 p-6 min-h-56 transition-colors duration-300 text-center flex flex-col items-center">
+                        <img src="../images/flask.png" alt="Website Maintenance" class="mb-4 w-24 h-24 object-cover">
+                        <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-black">Website Maintenance</h3>
+                    </div>
+                    <!-- Service Box 6 -->
+                    <div class="group bg-color-2 hover:bg-color-3 p-6 min-h-56 transition-colors duration-300 text-center flex flex-col items-center">
+                        <img src="../images/ideas.png" alt="Consulting Services" class="mb-4 w-24 h-24 object-cover">
+                        <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-black">Consulting Services</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section class="bg-black py-12" id="skills-section">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h1 class="text-5xl font-bold text-white mb-4">Skills</h1>
+                    <p class="text-gray-400 text-lg">I have a diverse set of web development and programming skills that enable me to build functional, dynamic websites and applications.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Skill 1 -->
+                    <div class="bg-black p-6 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-white mb-2">HTML</h3>
+                        <div class="relative pt-1">
+                            <div class="flex items-center justify-between mb-1">
+                                <span class="text-lg font-medium text-white">80%</span>
+                            </div>
+                            <div class="relative flex items-center w-full h-2 bg-gray-700 rounded py-2">
+                                <div class="absolute top-0 left-0 h-full bg-color-3 rounded-md" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Skill 2 -->
+                    <div class="bg-black p-6 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-white mb-2">CSS</h3>
+                        <div class="relative pt-1">
+                            <div class="flex items-center justify-between mb-1">
+                                <span class="text-lg font-medium text-white">85%</span>
+                            </div>
+                            <div class="relative flex items-center w-full h-2 bg-gray-700 rounded py-2">
+                                <div class="absolute top-0 left-0 h-full bg-color-3 rounded-md" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Skill 3 -->
+                    <div class="bg-black p-6 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-white mb-2">Bootstrap</h3>
+                        <div class="relative pt-1">
+                            <div class="flex items-center justify-between mb-1">
+                                <span class="text-lg font-medium text-white">75%</span>
+                            </div>
+                            <div class="relative flex items-center w-full h-2 bg-gray-700 rounded py-2">
+                                <div class="absolute top-0 left-0 h-full bg-color-3 rounded-md" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Skill 4 -->
+                    <div class="bg-black p-6 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-white mb-2">Laravel</h3>
+                        <div class="relative pt-1">
+                            <div class="flex items-center justify-between mb-1">
+                                <span class="text-lg font-medium text-white">70%</span>
+                            </div>
+                            <div class="relative flex items-center w-full h-2 bg-gray-700 rounded py-2">
+                                <div class="absolute top-0 left-0 h-full bg-color-3 rounded-md" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Skill 5 -->
+                    <div class="bg-black p-6 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-white mb-2">SQL</h3>
+                        <div class="relative pt-1">
+                            <div class="flex items-center justify-between mb-1">
+                                <span class="text-lg font-medium text-white">75%</span>
+                            </div>
+                            <div class="relative flex items-center w-full h-2 bg-gray-700 rounded py-2">
+                                <div class="absolute top-0 left-0 h-full bg-color-3 rounded-md" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Skill 6 -->
+                    <div class="bg-black p-6 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-white mb-2">Java</h3>
+                        <div class="relative pt-1">
+                            <div class="flex items-center justify-between mb-1">
+                                <span class="text-lg font-medium text-white">80%</span>
+                            </div>
+                            <div class="relative flex items-center w-full h-2 bg-gray-700 rounded py-2">
+                                <div class="absolute top-0 left-0 h-full bg-color-3 rounded-md" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-black py-12" id="projects-section">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="text-center mb-20">
+                    <h1 class="text-5xl font-bold text-white mb-4 py-12">Our Projects</h1>
+                    <p class="text-gray-300 text-lg">Our team has successfully delivered a variety of projects that demonstrate our collective expertise in web development, software engineering, and user-centric design.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Project 1 -->
+                    <div class="relative overflow-hidden group">
+                        <div class="h-64 bg-cover bg-center" style="background-image: url(../images/calc.png);"></div>
+                        <div class="absolute inset-0 bg-color-3 bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <h3 class="text-xl font-semibold mb-2">Calculator Application</h3>
+                                <span>Web Design</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="relative overflow-hidden group">
+                        <div class="h-64 bg-cover bg-center" style="background-image: url(../images/att.png);"></div>
+                        <div class="absolute inset-0 bg-color-3 bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <h3 class="text-xl font-semibold mb-2">Attendance Tracker</h3>
+                                <span>Web Design</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="relative overflow-hidden group">
+                        <div class="h-64 bg-cover bg-center" style="background-image: url(../images/text.png);"></div>
+                        <div class="absolute inset-0 bg-color-3 bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <h3 class="text-xl font-semibold mb-2">Text-Based RPG Game</h3>
+                                <span>Web Design</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 4 -->
+                    <div class="relative overflow-hidden group">
+                        <div class="h-64 bg-cover bg-center" style="background-image: url(../images/project-1.jpg);"></div>
+                        <div class="absolute inset-0 bg-color-3 bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <h3 class="text-xl font-semibold mb-2">Coming Soon</h3>
+                                <span>Web Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-cover bg-center py-12 relative" style="background-image: url(../images/bg_1.jpg); height: 500px" id="hire-section">
+            <div class="absolute inset-0 m-auto mx-auto px-6 lg:px-8">
+                <div class="flex justify-center items-center h-full">
+                    <div class="text-center p-8 rounded-lg">
+                        <h2 class="text-5xl font-bold text-white mb-4">I'm <span class="text-color-3">Available</span> for Freelancing</h2>
+                        <p class="text-gray-400 mb-4 text-lg">If you’re looking for a dedicated and experienced developer to bring your project to life, let’s connect!</p>
+                        <p class="mb-0">
+                            <a href="#" class="bg-color-3 hover:bg-color-3 text-black font-medium py-3 px-6 rounded-full transition-colors duration-300">Hire Me</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="bg-black text-white py-12" id="footer">
+            <div class="container mx-auto px-6 lg:px-8">
+                <div class="flex flex-wrap mb-8">
+                    <!-- About Section -->
+                    <div class="w-full md:w-1/4 mb-8 md:mb-0">
+                        <div class="footer-widget">
+                            <h2 class="text-2xl font-bold text-white mb-4">About</h2>
+                            <p>Whether you have a project in mind or just want to chat about tech, I’m here to help! Feel free to reach out if you have any questions or if you’re interested in collaborating.</p>
+                            <ul class="flex space-x-4 mt-5">
+                                <li><a href="#" class="text-white hover:text-orange-500"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#" class="text-white hover:text-orange-500"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#" class="text-white hover:text-orange-500"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Links Section -->
+                    <div class="w-full md:w-1/4 mb-8 md:mb-0">
+                        <div class="footer-widget">
+                            <h2 class="text-2xl font-bold text-white mb-4">Links</h2>
+                            <ul>
+                                <li><a href="#" class="flex items-center text-gray-300 hover:text-white mb-2"><i class="fas fa-long-arrow-alt-right mr-2"></i>Home</a></li>
+                                <li><a href="#" class="flex items-center text-gray-300 hover:text-white mb-2"><i class="fas fa-long-arrow-alt-right mr-2"></i>About</a></li>
+                                <li><a href="#" class="flex items-center text-gray-300 hover:text-white mb-2"><i class="fas fa-long-arrow-alt-right mr-2"></i>Services</a></li>
+                                <li><a href="#" class="flex items-center text-gray-300 hover:text-white mb-2"><i class="fas fa-long-arrow-alt-right mr-2"></i>Projects</a></li>
+                                <li><a href="#" class="flex items-center text-gray-300 hover:text-white mb-2"><i class="fas fa-long-arrow-alt-right mr-2"></i>Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Services Section -->
+                    <div class="w-full md:w-1/4 mb-8 md:mb-0">
+                        <div class="footer-widget">
+                            <h2 class="text-2xl font-bold text-white mb-4">Services</h2>
+                            <ul>
+                                <li><a href="#" class="flex items-center text-gray-300 hover:text-white mb-2"><i class="fas fa-long-arrow-alt-right mr-2"></i>Web Design</a></li>
+                                <li><a href="#" class="flex items-center text-gray-300 hover:text-white mb-2"><i class="fas fa-long-arrow-alt-right mr-2"></i>Web Development</a></li>
+                                <li><a href="#" class="flex items-center text-gray-300 hover:text-white mb-2"><i class="fas fa-long-arrow-alt-right mr-2"></i>Business Strategy</a></li>
+                                <li><a href="#" class="flex items-center text-gray-300 hover:text-white mb-2"><i class="fas fa-long-arrow-alt-right mr-2"></i>Data Analysis</a></li>
+                                <li><a href="#" class="flex items-center text-gray-300 hover:text-white mb-2"><i class="fas fa-long-arrow-alt-right mr-2"></i>Graphic Design</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Contact Section -->
+                    <div class="w-full md:w-1/4">
+                        <div class="footer-widget">
+                            <h2 class="text-2xl font-bold text-white mb-4">Have Questions?</h2>
+                            <ul>
+                                <li class="flex items-center mb-2"><i class="fas fa-map-marker-alt mr-2"></i><span>203 Taglatawan St, Bayugan City, Agusan Del Sur, PH</span></li>
+                                <li class="flex items-center mb-2"><a href="tel:+23923929210" class="flex items-center text-gray-300 hover:text-white"><i class="fas fa-phone mr-2"></i><span>+2 392 3929 210</span></a></li>
+                                <li class="flex items-center"><a href="mailto:info@yourdomain.com" class="flex items-center text-gray-300 hover:text-white"><i class="fas fa-envelope mr-2"></i><span>info@yourdomain.com</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <p class="text-gray-500">&copy; <script>document.write(new Date().getFullYear());</script> All rights reserved</a></p>
+                </div>
+            </div>
+        </footer>
+        
+        <script>
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script>
+    </body>
+    </html>
